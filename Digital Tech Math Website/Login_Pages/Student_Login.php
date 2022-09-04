@@ -115,7 +115,7 @@
         <label for="showpassword_checkbox">Show Password</label>
         <label type="link" id="forgotpass">Forgot Password?</label> 
         <button onclick=goto_student_home_page() id = "button_login">LOGIN</button>
-        <button onclick=goto_to_teacher_login() id="button_goto_teacher_login">TEACHER LOGIN</button>
+        <button onclick=send_to_database() id="button_goto_teacher_login">TEACHER LOGIN</button>
     </form>
         <!--<img id="show_password_icon" src="https://cdn-icons-png.flaticon.com/512/2355/2355322.png" alt="eye">-->
     </div>
@@ -138,5 +138,27 @@
         }
     
     </script>    
+<?php
+function send_to_database(){
+    
+    $student_id = $_POST['student_id']
+    $student_pass = $_POST['student_password']
+
+    //database connection
+    $conn =new mysqli('localhost','root','','studpass')
+    if($conn->connect_error){
+        die('Connection Failed  :  '.$conn->connect_error);
+    }else{
+        $stmt = $conn->prepare("insert into registration(student_id, student_pass) values(?, ?,)");
+		$stmt->bind_param("ss", $student_id, $student_pass,);
+		$execval = $stmt->execute();
+		echo $execval;
+		echo "Registration successfully...";
+		$stmt->close();
+		$conn->close();
+    } 
+}
+    
+?>
 </body>
 </html>
