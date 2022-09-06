@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Login</title>
+
+    <style>
+        body 
+        {    
+            background-image: url("https://i.stack.imgur.com/9WYxT.png");
+            background-size:cover;
+
+        }
+        #button_login {
+            height: 25px;
+            width: 80px;
+            background-color: rgb(0, 126, 252);
+            border-radius: 20px;
+            border: none;
+            font-size: 16px;
+            color: white;
+            margin: 8px;
+            margin-left: 27.5px;
+            margin-top:20px;   
+        }
+        #button_login:hover{
+            opacity: 80%;
+            height: 27px;
+            width: 82px;
+        }
+        .loginform {
+            border-width: 0.5px;
+            border-style: solid;
+            border-color: rgb(184, 175, 175);
+            border-radius: 20px;
+            width: 300px;
+            height: 28px;
+            font-size: 12px;
+            margin: 8px;
+            
+        }
+        .loginform:hover{
+            
+            font-size: 13px;
+        }
+        #login_h1
+        {
+            margin-left: 36.2249%;
+            font-size: 55px;
+            color: rgb(255, 255, 255);
+            opacity:90%;
+        }
+        #logindivbox  
+        {
+            margin-left: 38.5%;
+            width:300px;
+            background-color: rgba(236, 236, 236, 0.856);
+            padding: 50px;
+            border-radius:25px;
+            height: 150px;
+            padding-left:30px;
+            padding-top:20px;
+            opacity: 80%;
+        }
+        #forgotpass
+        {
+           color: blue;
+           margin-left:18%;
+        }
+        #forgotpass:hover
+        {
+           text-decoration:underline;
+        }
+        #button_goto_student_login:hover{
+            opacity: 90%;
+            height: 27px;
+            width: 172px;
+        }
+        #button_goto_student_login{
+            height: 25px;
+            width: 170px;
+            background-color: rgb(0, 126, 252);
+            border-radius: 20px;
+            border: none;
+            font-size: 16px;
+            color: white;
+        }
+        /*#show_password_icon{
+            width: 16px;
+            height: 16px;
+            left: 642px;
+            bottom: 630px;
+            margin-left:5%;
+        }
+        #show_password_icon:hover{
+            width:18px;
+            height:18px;
+        }*/
+    </style>
+
+    <title>Login</title>
+</head>
+<body>
+    <h1 id="login_h1">TEACHER LOGIN</h1>
+    <div id="logindivbox">
+        
+        <input type="text" class="loginform" id="teacher_ID" placeholder="Teacher ID">
+        <input type="password" class="loginform" id="teacher_Password" placeholder="Password">
+
+        <input type="checkbox" id = "showpassword_checkbox" onclick="showpass()">
+        <label for="showpassword_checkbox">Show Password</label>
+        <label type="link" id="forgotpass">Forgot Password?</label> 
+        <button id = "button_login">LOGIN</button>
+        <button onclick=goto_to_student_login() id="button_goto_student_login">STUDENT LOGIN</button>
+        <!--<img id="show_password_icon" src="https://cdn-icons-png.flaticon.com/512/2355/2355322.png" alt="eye">-->
+    </div>
+    <script>
+        function showpass()
+        {
+            var teapass = document.getElementById("teacher_Password")
+            if (teapass.type === "password"){
+                teapass.type = "text";
+            } else {
+                teapass.type = "password";
+            }
+        }
+        function goto_to_student_login(){
+            window.location.href = 'http://127.0.0.1:5500/Login_Pages/Student_Login.html';
+        }
+    </script> 
+</body>
+</html>

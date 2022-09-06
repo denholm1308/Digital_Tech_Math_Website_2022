@@ -1,0 +1,57 @@
+
+body 
+{    
+    background-image: url("https://i.stack.imgur.com/9WYxT.png");
+    background-size:cover;
+
+}
+#button_generate{
+    height: 28px;
+    width: 105px;
+    background-color: rgb(0, 128, 255);
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    color: white;
+    margin-left: 70%;
+    margin-top: 1px;
+    top: 90px;
+}
+#VCM_textbox{
+    border-radius: 20px;
+    border:none;
+    width: 300px;
+    height: 10px;
+    padding: 8px;
+    margin-left: 2%;
+    margin-top: 40px;
+}
+#title_vcm_code{
+    color: white;
+    text-align: center;
+}
+#div1{
+    background-color: rgba(236, 236, 236, 0.856);
+    height: 200px;
+    width: 600px;
+    margin-left: 34.5%;
+    border-radius: 20px;
+    position: absolute;
+    
+}
+#button_generate:hover{
+    opacity: 80%;
+    width: 106px;
+    height: 29px;
+}
+#VCM_textbox:hover{
+    font-size: 14px;
+}
+#learing_plan{
+    background-color: rgba(236, 236, 236, 0.856);
+    height: 200px;
+    width: 600px;
+    margin-left: 50%;
+    border-radius: 20px;
+    border-width: 2px;
+}
